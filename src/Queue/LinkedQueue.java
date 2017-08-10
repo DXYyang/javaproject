@@ -3,6 +3,7 @@ package Queue;
 import Node.Node;
 
 import java.io.Serializable;
+import java.util.NoSuchElementException;
 
 /**
  * Created by admin on 2017/7/31.
@@ -99,6 +100,9 @@ public class LinkedQueue<T> implements Queue<T> ,Serializable {
      */
     @Override
     public T element() {
+        if(isEmpty()){
+            throw new NoSuchElementException("The LinkedQueue is empty");
+        }
         return this.front.data;
     }
 
@@ -124,6 +128,9 @@ public class LinkedQueue<T> implements Queue<T> ,Serializable {
      */
     @Override
     public T remove() {
+        if(isEmpty()){
+            throw new NoSuchElementException("The LinkedQueue is empty");
+        }
         T x=this.front.data;
         this.front=this.front.next;
         if (this.front==null)
