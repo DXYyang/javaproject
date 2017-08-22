@@ -39,7 +39,7 @@ public class RandomizedSelect {
         Swap(a,i,p);
         return Partition(a,p,r);
     }
- static   int RandomizedSelect(int a[],int p,int r,int k){
+    static int RandomizedSelect(int a[],int p,int r,int k){
         if(p==r){
             return a[p];
         }
