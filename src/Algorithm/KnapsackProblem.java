@@ -39,7 +39,7 @@ public class KnapsackProblem {
         int tempWeight=totalWeight;
         for(int i=n;i>=1;i--){
             if(bestValues[i][tempWeight]>bestValues[i-1][tempWeight]){
-                bestSolution.add(bags[i-1]);
+                    bestSolution.add(bags[i-1]);
                 tempWeight-=bags[i-1].getWeight();
             }
             if(tempWeight==0)break;

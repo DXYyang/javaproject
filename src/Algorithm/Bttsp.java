@@ -30,7 +30,6 @@ public class Bttsp {
                 for(int j=1;j<=n;j++) bestx[j]=x[j];
                 bestc=cc+a[x[n-1]][x[n]]+a[x[n]][1];
             }
-
         }else{
             for(int j=i;j<=n;j++){
                 if(a[x[i-1]][x[j]]!=-1&&(bestc==Float.MAX_VALUE||cc+a[x[i-1]][x[j]]<bestc)){
