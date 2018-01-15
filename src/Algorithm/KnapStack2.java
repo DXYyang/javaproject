@@ -57,9 +57,11 @@ public class KnapStack2 {
     }
     public void backtrack(int i){
         if(i>n-1){
+            if(cp>bestp){
             bestp=cp;
             for(int j=0;j<n;j++)
                 bestx[j]=x[j];
+            }
             return;
         }
        if(cw+w[i]<=c){
